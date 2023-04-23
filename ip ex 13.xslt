@@ -8,16 +8,16 @@
             <h2>EMPLOYEE DETAILS</h2>   
             <table border = "2">    
                   <th>NAME</th>   
-                  <th>SALARY</th> 
+                  <th>STATUS</th> 
                   
               <xsl:for-each select="employees/employee"> 
-                  <xsl:if test="salary > 5000">
+                  <xsl:if test="status==part-time">
                       <tr>
                        <td><xsl:value-of select = "name"/></td>   
-                       <xsl:value-of select = "salary"/></td>      
+                       <xsl:value-of select = "status"/></td>      
                       </tr>  
                        </xsl:if>
-                        <xsl:if test="salary<= 5000">
+                        <xsl:if test="status==full-time">
                         <tr>     
                         <td><xsl:value-of select = "name"/></td>   
                         <td><xsl:value-of select = "salary"/></td>   
